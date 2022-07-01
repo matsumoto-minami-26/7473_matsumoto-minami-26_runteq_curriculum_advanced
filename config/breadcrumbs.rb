@@ -74,7 +74,7 @@ end
 
 crumb :edit_admin_tag do |tag|
   link 'タグ編集', edit_admin_tag_path(tag)
-  parent :admin_categories
+  parent :admin_tags
 end
 
 crumb :admin_authors do
