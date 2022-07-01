@@ -93,3 +93,4 @@ $ spring rspec spec/[対象ファイル]
 /login_as/[user_id]
 ```
 
+# 7473_matsumoto-minami-26_runteq_curriculum_advanced
