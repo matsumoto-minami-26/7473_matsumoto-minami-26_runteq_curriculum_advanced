@@ -38,6 +38,8 @@
           = f.input :author_id, as: :select2, collection: Author.pluck(:name, :id)
           = f.input :category_id, as: :select2, collection: Category.pluck(:name, :id)
           = f.input :tag_ids, as: :select2, collection: Tag.pluck(:name, :id), include_blank: false, input_html: { multiple: true }
+          = f.input_field :eyecatch_align, as: :radio_buttons
+          = f.input :eyecatch_width, placeholder: '100'
 
         .box-footer
           = f.button :submit, class: %w[btn btn-primary]
