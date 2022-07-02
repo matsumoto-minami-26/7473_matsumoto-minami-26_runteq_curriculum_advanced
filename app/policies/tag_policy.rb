@@ -1,5 +1,4 @@
 class TagPolicy < TaxonomyPolicy
-
   def index?
     # アクセスユーザー権限がadminまたはeditorのときのみ認可
     user.admin? || user.editor?
