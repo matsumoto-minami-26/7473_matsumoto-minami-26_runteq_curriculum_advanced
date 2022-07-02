@@ -40,4 +40,17 @@ class ArticlesController < ApplicationController
     @category = Category.find_by!(slug: params[:category_slug])
     @title = @category.name
   end
+
+  def update
+    authorize(@article)
+    
+    @article.assign_attributes(article_params)
+    @article.adjust_state
+    if @article.save
+      flash[:notice] = '更新しました'
+      redirect_to edit_admin_article_path(@article.uuid)
+    else
+      render :edit
+    end
+  end
 end
