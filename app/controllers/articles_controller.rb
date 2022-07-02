@@ -43,7 +43,6 @@ class ArticlesController < ApplicationController
 
   def update
     authorize(@article)
-    
     @article.assign_attributes(article_params)
     @article.adjust_state
     if @article.save
